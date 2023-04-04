@@ -1,0 +1,60 @@
+body {
+   
+}
+
+/* h1의 자매인 모든 h2에 plum 배경색 h1은 안됨*/
+h1 ~ h2 { 
+    background-color: plum;
+}
+
+/* h1의 자매 중 첫번째 h2만 plum 배경색    */
+h1 + h2 { /*h3은 안머거 */
+    background-color: plum;
+}
+
+
+/* h1과 h2는 plum 배경색 */
+h1, h2 { /*h3은 안머거 */
+    background-color: plum;
+}
+
+
+
+li {
+    color: #333;
+    font-size: 32px;
+}
+
+
+
+.korean {
+    color: skyblue;
+}
+
+.Japanese {
+    color: darkblue;
+}
+
+.leader {
+    color: blueviolet;
+}
+
+.wonyeong {
+    color: violet;
+}
+
+li:nth-child(5) {
+    text-decoration: underline;
+}
+
+li:nth-child(2n) {
+    background-color: #eee;
+}
+
+li:nth-child(5n) {
+    background-color: #aaa;
+}
+
+ul li:nth-child(2) {
+    text-decoration: overline;
+}
