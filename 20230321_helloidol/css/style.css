@@ -19,42 +19,51 @@ h1, h2 { /*h3은 안머거 */
 }
 
 
-
-li {
-    color: #333;
+h5 ~ h6,
+ol, ul {
+    color: #333;  /* font-size 아님 (시험)*/
     font-size: 32px;
 }
 
 
 
-.korean {
+.korea {
     color: skyblue;
 }
 
-.Japanese {
+.japan {
+    color: crimson;
+}
+
+.incheon {
     color: darkblue;
 }
 
 .leader {
-    color: blueviolet;
-}
-
-.wonyeong {
-    color: violet;
+    color: purple;
 }
 
 li:nth-child(5) {
     text-decoration: underline;
 }
 
-li:nth-child(2n) {
+li:nth-child(even) {      /* odd : 홀수, even: 짝수, 2n : 짝수, 1n 이면 다쳐짐*/
     background-color: #eee;
 }
 
-li:nth-child(5n) {
+li:nth-child(5n) {      /*  */
     background-color: #aaa;
 }
 
-ul li:nth-child(2) {
+[type="text"] {
+    background-color: aqua;
+}
+
+ul:nth-child(3) > li:nth-child(2):hover {
     text-decoration: overline;
+
+}
+
+body > div:nth-child(8) > ul:nth-child(3) > li:nth-child(2) {
+    font-size: 8px;
 }
