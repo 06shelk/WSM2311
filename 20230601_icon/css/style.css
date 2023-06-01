@@ -1,0 +1,16 @@
+.bi-list {
+    color: crimson;
+    font-size: 2rem;
+}
+
+/*
+px : 1개의 점 (화소)
+카메라 : 1200만 화소
+display : 301만 화소 
+절대단위 ex) cm 
+상대단위 ex) 
+ - em(부모의 영향을 받음,padding)
+ - rem(기본 폰트의 몇배, font-size)
+ - ex, vw(화면에서 몇 퍼로 보이냐)
+ - %(부모에서 몇 퍼냐) 
+*/
