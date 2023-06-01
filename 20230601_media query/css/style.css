@@ -1,0 +1,21 @@
+/* desktop */ 
+body {
+    background-color: crimson;
+}
+
+/* tablet */
+/* 최대 너비가 720일 때 적용 즉, 720px보다 작을 때 적용 / 시험에 나옴(min-width의 경우에도 똑같이 동작하니까 비교) */
+@media screen and (max-width: 720px){
+    body {
+        background-color: rgb(113, 184, 255);
+    }
+}
+
+
+/* mobile */
+/* 최대 너비가 540일 때 적용 즉, 540px보다 작을 때 적용 */
+@media screen and (max-width: 540px){
+    body {
+        background-color: darkcyan;
+    }
+}
