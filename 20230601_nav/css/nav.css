@@ -97,12 +97,14 @@ nav {
         background-color: rgba(239,177,28,0.4);
         backdrop-filter: blur(4px);
         height: 0; /*처음에 안 보이게*/
-
+        border-bottom: #fff;
+        transition: all 0.4s;
+        
     }
 
     .nav-item {
-        padding: 1em 0;
-        border-bottom: 2px solid rgb(176, 130, 23);
+       padding: 1em 0;
+       border-bottom: #fff solid 1px;
     }
 
     .nav-link {
@@ -118,7 +120,8 @@ nav {
 
     /* .show-menu하면, nav-list 보이게 */
     .show-menu {
-        height: 171px;
+        height: 170px;
+        
     }
 
     /* .show-menu하면, nav-toggle 모양 x자로 */
