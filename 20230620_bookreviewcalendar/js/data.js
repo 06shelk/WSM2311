@@ -81,6 +81,7 @@ let reviews = [
     },
 ]
 
+/*
 let entertainer = ["아이유", "이석훈", "zb1"]
 console.log(entertainer[2])
 let person = {"group": "zb1","name": "장하오", "country": "china"}
@@ -89,3 +90,4 @@ console.log(person.name) // 장하오
 
 console.log(books[3].author) // 유연
 console.log(books[3]["author"]) // 유연
+*/
