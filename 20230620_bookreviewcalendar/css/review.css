@@ -6,12 +6,8 @@ main {
     display: flex;
 }
 
-.image-info-groups {
-    
-}
-
 .info-groups {
-    border: 2px brown solid;
+    border: 2px gray solid;
     flex-wrap: wrap;
 }
 
@@ -27,6 +23,7 @@ main {
     flex-direction: column;
 }
 
+
 .book-image {
     width: 200px;
     height: 400px;
@@ -41,32 +38,31 @@ main {
     height: 150px;
 }
 
-@media screen and (max-width: 540px) { /* 540px 이하의 너비 이하면 아래 스타일 적용 */
-    .image-info-groups {
+@media screen and (max-width : 540px){ /*540px이하면 아래 스타일 적용*/
+    .image-info-groups{
         flex-direction: column;
     }
-
+}
+@media screen and (max-width : 540px){ /*560px이하면 아래 스타일 적용*/
     main {
         margin-top: calc(44px + 40px);
     }
     
 }
 
-
-
 /* delete me */
 main div {
-    border: 2px solid violet;
+    border: 2px solid black;
 }
 
 .book-image {
-    background-color: slateblue;
+    background-color: pink;
 }
 
 .info {
-    background-color: tomato;
+    background-color: gold;
 }
 
 .review {
-    background-color: seagreen;
+    background-color: cornflowerblue;
 }
