@@ -1,3 +1,27 @@
+// let name = "이가현";
+// consol.log(`안녕하세요 ${name}`);
+
+// const bookId = "1"
+// console.log(`bookId : ${bookId}`);
+
+// // URL의 파라미터 값을 가져오고 인덱스로 전환
+// const title = book[0].title;
+// console.log(`bookTitle: ${bookTitle}`);
+
+// const urlParams = new URL(location.href).searchParams;
+// const urlName = urlParams.get('book');
+// const url = (parseInt(urlName) - 1)
+// const bookIdNumber = parseInt(urlName); 
+// console.log(`bookId: ${id}, type : ${typeof bookIdNumber}`);
+
+// for (let book of books){
+//     if(bookIdNumber === book.id){
+//         bookData = book;
+//         break;
+//     }
+// }
+// let title = bookData.title
+
 // 내가 짠 코드
 // const urlParams = new URL(location.href).searchParams;
 // const url = urlParams.get('book');
@@ -24,18 +48,12 @@
 let url_href = window.location.href;    //브라우저 창에 있는 주
 const bookId = new URL(url_href).searchParams.get("book");
 console.log(`bookId: ${bookId}, type : ${typeof bookId}`);
-//bookId가 null이면, index.html로 가자
-if(bookId === null){
-    window.location.href = 'index.html';
-    
-    // var link = 'index.html';
-    // location.href=link;
-    // location.replace(link);
-    //indow.open(link);
 
-    //window.open("index.html", target="_top"); // 새로운 창 열려서 이동하는 문제 해결
+// bookId 이 null이면 index.html로 가는 코드
+if(bookId == null){
+    window.location.href = "index.html";
+    //window.open("index.html") -> 탭이 열림
 }
-
 
 //-> String 을 number로 변환:bookIdNumber 
 let bookIdNumber = parseInt(bookId);    //string->number
@@ -76,3 +94,17 @@ publisherDiv.innerHTML = publisher;
 
 const bookImageDiv = document.getElementsByClassName("book-image")[0];
 bookImageDiv.innerHTML = `<img src="${bookImage}"/>`;
+
+const readDataDiv = document.getElementsByClassName("read-date")[2];
+let now = "2030년 8월 17일";
+now = new Date();
+let year = now.getFullYear();
+let month = now.getMonth();
+let date = now.getDate();
+let day = now.getDay();
+
+var weeks = ['일', '월', '화', '수', '목', '금', '토'];
+day = weeks[day];
+
+
+readDataDiv.innerHTML = `${year}년 ${month + 1}월 ${date}일 ${day}요일`;
