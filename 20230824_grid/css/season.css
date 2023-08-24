@@ -1,0 +1,38 @@
+.container .item {
+    border: 2px solid black;
+}
+
+html,body {
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    width:  100%;
+    min-height: 100%;   /* 높이를 브라우저 창 전체를 차지하는 방법 : 100vh */
+    grid-template-rows: 4fr 6fr;
+    grid-template-columns: 3fr 7fr; /* 30% 70%; */
+
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1 {
+    background-color: lavender;
+}
+
+.item2 {
+    background-color: rgb(255, 164, 148);
+}
+
+.item3 {
+    background-color: sandybrown;
+}
+
+.item4 {
+    background-color: aliceblue;
+}
