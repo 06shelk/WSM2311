@@ -1,10 +1,8 @@
 main {
+    margin: 0 auto; 
     margin-top: calc(44px + 100px);
-}
-
-.title.flex-container {
-    display: flex;
-    font-size: 2rem;
+    width: calc(100% - 100px * 2);
+    max-width: 600px;
 }
 
 .title.flex-container {
@@ -12,19 +10,71 @@ main {
     justify-content: center;
     column-gap: 40px;
     font-size: 2rem;
-    
-    
+    margin-bottom: 20px;
 }
+
 
 .weekday.container {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     font-size: 1.5rem;
     text-align: center;
+    background-color: rgb(68, 178, 112);
+    border-radius: 10px;
+    padding: 10px;
 }
 
-/* delete me */
-main * {
-    border: 2px solid black;
+.dates.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 1.25rem;
+    padding: 10px;
+    
 }
+
+
+
+.date.item {
+    padding: 10px;
+    aspect-ratio: 1/1;  /* 1:1 비율 */
+    display: grid;  /* 글자 수평, 수직 가운데로 */
+    place-items: center; /* 글자 수평, 수직 가운데로 */
+}
+
+.date.item:nth-child(1) {
+    grid-column-start: 6;  /* 열 -> 6 */
+    background-color: aquamarine;
+}
+
+/* 오늘 포커싱 */
+
+.review.flex-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    row-gap: 10px;
+    background-color: rgb(68, 178, 112);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* tablet */
+@media screen and (max-width: 720px) {
+    main {
+        margin-top: calc(44px + 40px);
+        width: calc(100% - 10px * 2);
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 540px) {
+    
+}
+
+
+
+/* delete me */
+/* main * {
+    border: 2px solid black;
+} */
 
