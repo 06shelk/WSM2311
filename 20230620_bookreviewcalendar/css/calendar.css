@@ -42,8 +42,7 @@ main {
 }
 
 .date.item:nth-child(1) {
-    grid-column-start: 6;  /* 열 -> 6 */
-    background-color: aquamarine;
+  
 }
 
 /* 오늘 포커싱 */
