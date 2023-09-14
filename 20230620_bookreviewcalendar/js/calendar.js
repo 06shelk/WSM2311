@@ -26,6 +26,9 @@ const setCalendar = (year, month) => {
     // 달의 마지막 일
     var lastDate = new Date(year, month - 1 + 1, 0).getDate();
 
+    //원래 있던 달력의 .date.item clear
+    datesContainerDiv.replaceChildren();
+
     //.date.item{$}*lastDate
     // for 1 ~ lastDate
     for (let date = 1; date <= lastDate; date++) {
@@ -46,8 +49,43 @@ const setCalendar = (year, month) => {
     
 
     // < 이전달
+    const leftDiv = document.getElementsByClassName("left")[0];
+    //leftDiv.addEventListener("click", () => console.log(`${month}월`));
+    leftDiv.onclick = () => {
+        month--;
+
+        if (month == 0) {
+            year--;
+            month = 12;
+        }
+
+        // let thisMonthDateObject = new Date(year, month - 1);
+        // year = thisMonthDateObject.getFullYear();
+        // month = thisMonthDateObject.getMonth() + 1;
+
+        setCalendar(year, month);
+    }
     
+
+
+    // document.querySelector('.left').addEventListener('click', function() {
+    //     month--; // 월을 하나 감소
+    //     
+    
+
     // > 이후달
+    const rightDiv = document.getElementsByClassName("right")[0];
+    rightDiv.onclick = () => {
+        month++;
+
+        if (month == 13) {
+            year++;
+            month = 1;
+        }
+        setCalendar(year, month);
+    }
+
+    console.log(`${month}월`);
 }
 
 setCalendar(year, month);
