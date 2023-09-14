@@ -47,6 +47,19 @@ const setCalendar = (year, month) => {
     //CSS {grid-column-start: firstDateDay + 1;}
     firstDateDiv.style.gridColumnStart = firstDateDay + 1;
     
+    // 토 : 파랑
+    let saturdayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n+${ 7 - firstDateDay })`);
+    for (let dateItem of saturdayDivs) {
+        dateItem.style.color = "blue";
+
+    }
+
+    // 토 : 빨강
+    let sundayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n+${ (7 - firstDateDay + 1)%7})`);
+    for (let dateItem of sundayDivs) {
+        dateItem.style.color = "red";
+        
+    }
 
     // < 이전달
     const leftDiv = document.getElementsByClassName("left")[0];
@@ -72,6 +85,20 @@ const setCalendar = (year, month) => {
     //     month--; // 월을 하나 감소
     //     
     
+
+    //현재 달로 돌아가기
+    const thisMonthDiv = document.getElementsByClassName("month")[0]
+    thisMonthDiv.onclick = () => {
+
+        now = new Date();
+        year = now.getFullYear();
+        month = now.getMonth() + 1;
+        
+        setCalendar(year, month);
+
+    }
+
+
 
     // > 이후달
     const rightDiv = document.getElementsByClassName("right")[0];
