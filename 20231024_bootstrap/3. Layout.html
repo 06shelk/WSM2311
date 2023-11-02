@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 3. layout</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="display-1">Layout</header>
+    <div class="container bg-primary my-2">.container</div>
+    <div class="container-sm bg-primary my-2">.container-sm</div>
+    <div class="container-md bg-primary my-2">.container-md</div>
+    <div class="container-lg bg-primary my-2">.container-lg</div>
+    <div class="container-xl bg-primary my-2">.container-xl</div>
+    <div class="container-xxl bg-primary my-2">.container-xxl</div>
+    <div class="container-fluid bg-primary my-2">.container-fluid</div>
+
+    <hr>
+    <header class="display-2">All breakpoints</header>
+    .container>.row>.col여러개
+    .container>.row>.col{col - 1-$}*6
+    <div class="container-sm text-center">
+        <div class="row">
+            <div class="col-secondary border border-3">col - 1-1</div>
+            <div class="col-secondary border border-3">col - 1-2</div>
+            <div class="col-secondary border border-3">col - 1-3</div>
+            <div class="col-secondary border border-3">col - 1-4</div>
+            <div class="col-secondary border border-3">col - 1-5</div>
+            <div class="col-secondary border border-3">col - 1-6</div>
+        </div>
+        <div class="row">
+            <div class="col bg-secondary border border-3">col 2-1</div>
+            <div class="col bg-secondary border border-3">col 2-2</div>
+            <div class="col bg-secondary border border-3">col 2-3</div>
+        </div>
+    </div>
+    <hr>
+    <header class="display-2">column width</header>
+    .container.text-center>.row>.col.bg-info.border.border-3{col 1-$}*4
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-4 bg-info border border-3">col 1-1</div>
+            <div class="col-2 bg-info border border-3">col 1-2</div>
+            <div class="col-4 bg-info border border-3">col 1-3</div>
+            <div class="col-2 bg-info border border-3">col 1-4</div>
+        </div>
+        <div class="row">
+            <div class="col-4 col-log-3 bg-info border border-3">col 2-1</div>
+            <div class="col-2 col-log-3 bg-info border border-3">col 2-2</div>
+            <div class="col-4 col-log-3 bg-info border border-3">col 2-3</div>
+            <div class="col-2 col-log-3 bg-info border border-3">col 2-4</div>
+        </div>
+        <div class="row">
+            <div class="col-3 col-sm bg-info border border-3">col 3-1</div>
+            <div class="col-6 col-sm bg-info border border-3">col 3-2</div>
+            <div class="col-3 col-sm bg-info border border-3">col 3-3</div>
+        </div>
+        <div class="row">
+            <div class="col col-sm bg-info border border-3">col 4-1</div>
+            <div class="col-6 col-sm bg-info border border-3">col 4-2</div>
+            <div class="col col-sm bg-info border border-3">col 4-3</div>
+        </div>
+        <div class="row">
+            <div class="col-2 col-sm bg-info border border-3">col 4-1</div>
+            <div class="col-auto col-sm bg-info border border-3">col 4-2</div>
+            <div class="col col-sm bg-info border border-3">col 4-3</div>
+        </div>
+    </div>
+    <hr>
+    <header class="display-2">Row Columns</header>
+    .contanier-sm.text-center>.row>.col.bg-warning.border.border-3{col 1-$}*4
+    <div class="contanier-sm text-center">
+        <div class="row row-cols-2">
+            <div class="col bg-warning border border-3">col 1-1</div>
+            <div class="col bg-warning border border-3">col 1-2</div>
+            <div class="col bg-warning border border-3">col 1-3</div>
+            <div class="col bg-warning border border-3">col 1-4</div>
+        </div>
+        <div class="row row-cols-3">
+            <div class="col bg-warning border border-3">col 1-1</div>
+            <div class="col bg-warning border border-3">col 1-2</div>
+            <div class="col bg-warning border border-3">col 1-3</div>
+            <div class="col bg-warning border border-3">col 1-4</div>
+        </div>
+        <div class="row row-cols-auto">
+            <div class="col bg-warning border border-3">col 1-1</div>
+            <div class="col bg-warning border border-3">col 1-2</div>
+            <div class="col bg-warning border border-3">col 1-3</div>
+            <div class="col bg-warning border border-3">col 1-4</div>
+        </div>
+        <div class="display-3">576px: 1열, >= 574px: 2열, >= 768px: 3열, >= 992px: 4열</div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+            <div class="col bg-warning border border-3">col 1-1</div>
+            <div class="col bg-warning border border-3">col 1-2</div>
+            <div class="col bg-warning border border-3">col 1-3</div>
+            <div class="col bg-warning border border-3">col 1-4</div>
+        </div>
+    </div>
+    <hr>
+    <header class="display-2">justify-content</header>
+        .container-sm-text-center>.row>.col.bg-danger.border.border-3{col 1-$}
+        <div class="container-sm-text-center">
+            <div class="row justify-content-center">
+                <div class="col-2 bg-danger border border-3">col 1-1</div>
+                <div class="col-2 bg-danger border border-3">col 1-2</div>
+                <div class="col-2 bg-danger border border-3">col 1-3</div>
+            </div>
+        </div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, ea odit. Minus fugit eius excepturi eos corporis, neque magni atque harum ab illo accusamus soluta suscipit itaque consectetur. Iusto, atque.
+    Maxime sapiente quam cumque fugit dolorum, nobis vitae quidem nostrum sit totam nesciunt saepe voluptate in magni impedit itaque. Accusamus distinctio alias eos culpa repudiandae quam fugit dolore assumenda vero!
+    Asperiores adipisci eaque atque amet sint voluptas, odit soluta quo sunt beatae, incidunt, voluptate impedit maiores eos distinctio. Iure, rerum corrupti atque magni voluptatibus nulla blanditiis saepe harum ipsa nihil.
+    Quas, expedita fuga numquam dolores quia minima exercitationem ea laudantium cum debitis modi optio ipsum laborum unde temporibus voluptate, vero quisquam. Dolorum expedita rem ab asperiores? Pariatur vitae ea deleniti.
+    Quas aperiam fuga laborum quo nobis architecto distinctio sed aliquid pariatur inventore earum, nostrum enim eveniet molestiae consectetur doloribus eum consequuntur perferendis quae explicabo ea beatae voluptates vitae. Corrupti, et.
+    Tenetur aliquam repellendus veritatis porro, officia eum facere assumenda cupiditate alias sunt eveniet placeat quo molestias, eius maxime tempora similique non ipsum esse laborum, quisquam natus. Consequuntur adipisci nesciunt magni.
+    Error dolorum dolor similique minus eveniet, incidunt hic? Accusantium, quia rem. Necessitatibus quis veritatis voluptatem tempora. Accusamus numquam, maxime, assumenda et minus harum dolores est, dolorum dicta eligendi eum. Sequi.
+    Laborum delectus eaque, ullam doloremque adipisci culpa mollitia exercitationem sunt iusto! Facilis optio repellendus fugiat, quos, quidem veritatis repudiandae, itaque officia aperiam voluptates maiores beatae debitis rem sint neque autem.
+    Voluptatem minima distinctio ratione praesentium assumenda iste reprehenderit exercitationem, molestias dignissimos aut deserunt repellat eos asperiores rerum sapiente blanditiis similique pariatur nam enim dolores! Temporibus cupiditate pariatur blanditiis omnis tenetur?
+    Sapiente quam nulla suscipit neque labore maiores ex, id vitae quia numquam voluptas tempora aperiam officia architecto sunt placeat ad quas! Excepturi ab autem accusamus, fugiat quis eaque eum rem?
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
